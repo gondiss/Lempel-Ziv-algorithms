@@ -1,0 +1,13 @@
+set terminal png enhanced
+set title "Compression Efficiency"
+set auto x
+set yrange [0:14]
+set ylabel "bits/symbol"
+set style data histogram
+set style histogram cluster gap 1
+set style fill solid border -1
+set boxwidth 0.9
+set xtic rotate by -45
+#set bmargin 10 
+plot for [COL=2:6] 'data-lz.dat' using COL:xticlabels(1) title columnheader 
+#
